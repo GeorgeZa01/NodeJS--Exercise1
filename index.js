@@ -11,28 +11,46 @@ app.listen(PORT, () => {
 });
 
 //GET Method
-app.get('/', (req, res) => {
-    res.send('Hello World');
+app.get('/products', (req, res) => {
+    res.json({message: 'This is the GET product path'});
+});
+
+app.get('/users', (req, res) => {
+    res.json({message:'This is the GET users path'});
 });
 
 //POST Method
-app.post('/', (req, res) => {
-    res.send('Hello World');
+app.post('/users', (req, res) => {
+    res.json({message: 'This is the post path and user was added'});
+});
+
+app.post('/products', (req, res) => {
+    res.json({message: 'This is the post path and product was added'});
 });
 
 // PUT Method
-app.put('/', (req, res) => {
-    res.send('Hello World');
+app.put('/users', (req, res) => {
+    res.json({message: 'This is the put path and users was updated'});
+});
+app.put('/products', (req, res) => {
+    res.send({message: 'This is the put path and products was updated'});
 });
 
 //DELETE Method 
-app.delete('/', (req, res) => { 
-    res.send('Hello World');
+app.delete('/users', (req, res) => { 
+    res.json({message: 'This is the delete path and user was deleted'});
+});
+app.delete('/products', (req, res) => { 
+    res.json({message: 'This is the delete path and product was deleted'});
 });
 
 //PATCh Method
-app.patch('/', (req, res) => {
-    res.send('Hello World');
+app.patch('/users', (req, res) => {
+    res.json({message: 'This is the patch path and user was updated'});
+});
+
+app.patch('/products', (req, res) => {
+    res.json({message: 'This is the patch path and product was updated'});
 });
 
 
